@@ -1,0 +1,209 @@
+{{!-- <h1>Lista de cadastros</h1>
+<ul class="task-list">
+  {{#if emptyTasks}}
+  <p>Não há tarefas cadastradas</p>
+  {{/if}}
+  {{#each tasks}}
+  <li>
+    {{#if this.done}}
+    <a href="/tasks/edit/{{this.id}}" class="title done">{{this.title}}</a>
+    {{else}}
+    <a href="/tasks/edit/{{this.id}}" class="title">{{this.title}}</a>
+    {{/if}}
+    <span class="actions">
+      <form action="/tasks/updatestatus" method="POST">
+        <input type="hidden" name="id" value={{this.id}}>
+        <input type="hidden" name="done" value={{this.done}}>
+        <button type="submit">
+          <i class="bi bi-check2"></i>
+        </button>
+      </form>
+      <a href="/tasks/edit/{{this.id}}"><i class="bi bi-pencil-square"></i></a>
+      <form action="/tasks/remove" method="POST">
+        <input type="hidden" name="id" value={{this.id}}>
+        <button type="submit">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </form>
+    </span>
+  </li>
+  {{/each}}
+</ul> --}}
+
+{{!-- <h1>Minha Lista de Compromissos</h1>
+<ul class="task-list">
+  {{#if emptyTasks}}
+  <p>Não há tarefas cadastradas</p>
+  {{/if}}
+  {{#each tasks}}
+  <li>
+    <div class="task-details">
+      <h2 class="title">{{this.title}}</h2>
+      <p class="description">{{this.description}}</p>
+      <span class="date">{{this.date}}</span>
+    </div>
+    <span class="actions">
+      <form action="/tasks/updatestatus" method="POST">
+        <input type="hidden" name="id" value={{this.id}}>
+        <input type="hidden" name="done" value={{this.done}}>
+        <button type="submit">
+          <i class="bi bi-check2"></i>
+        </button>
+      </form>
+      <a href="/tasks/edit/{{this.id}}"><i class="bi bi-pencil-square"></i></a>
+      <form action="/tasks/remove" method="POST">
+        <input type="hidden" name="id" value={{this.id}}>
+        <button type="submit">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </form>
+    </span>
+  </li>
+  {{/each}}
+</ul> --}}
+
+{{!-- <h1>Minha Lista de Compromissos</h1>
+<ul class="task-list">
+  {{#if emptyTasks}}
+  <p>Não há tarefas cadastradas</p>
+  {{/if}}
+  {{#each tasks}}
+  <li>
+    <div class="task-details">
+      <h2 class="title">{{this.title}}</h2>
+      <p class="description">{{this.description}}</p>
+      <span class="date">{{this.date}}</span>
+    </div>
+    <span class="actions">
+      <form action="/tasks/updatestatus" method="POST">
+        <input type="hidden" name="id" value={{this.id}}>
+        <input type="hidden" name="done" value={{this.done}}>
+        <button type="submit">
+          <i class="bi bi-check2"></i>
+        </button>
+      </form>
+      <a href="/tasks/edit/{{this.id}}"><i class="bi bi-pencil-square"></i></a>
+      <form action="/tasks/remove" method="POST">
+        <input type="hidden" name="id" value={{this.id}}>
+        <button type="submit">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </form>
+      <div class="action">
+        <i class="bi bi-check2" onclick="markDone(this)"></i>
+      </div>
+    </span>
+  </li>
+  {{/each}}
+</ul> --}}
+
+
+
+{{!-- <h1>Minha Lista de Compromissos</h1>
+<ul class="task-list">
+  {{#if emptyTasks}}
+  <p>Não há tarefas cadastradas</p>
+  {{/if}}
+  {{#each tasks}}
+  <li>
+    <div class="task-details">
+      <h2 class="title">{{this.title}}</h2>
+      <p class="description">{{this.description}}</p>
+      <span class="date-time">
+        <p><strong>Data e hora de criação:</strong> {{this.createdAtFormatted}}</p>
+        <p><strong>Data e hora de atualização:</strong> {{this.updatedAtFormatted}}</p>
+      </span>
+    </div>
+    <span class="actions">
+      <form action="/tasks/updatestatus" method="POST">
+        <input type="hidden" name="id" value={{this.id}}>
+        <input type="hidden" name="done" value={{this.done}}>
+        <button type="submit">
+          <i class="bi bi-check2"></i>
+        </button>
+      </form>
+      <a href="/tasks/edit/{{this.id}}"><i class="bi bi-pencil-square"></i></a>
+      <form action="/tasks/remove" method="POST">
+        <input type="hidden" name="id" value={{this.id}}>
+        <button type="submit">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </form>
+      <div class="action">
+        <i class="bi bi-check2" onclick="markDone(this)"></i>
+      </div>
+    </span>
+  </li>
+  {{/each}}
+</ul>  --}}
+
+{{!-- <h1>Minha Lista de Compromissos</h1>
+<ul class="task-list">
+  {{#if emptyTasks}}
+  <p>Não há tarefas cadastradas</p>
+  {{/if}}
+  {{#each tasks}}
+  <li>
+    <div class="task-details">
+      <h2 class="title">{{this.title}}</h2>
+      <p class="description">{{this.description}}</p>
+      <span class="date-time">
+        <p><strong>Data e hora de criação:</strong> {{this.createdAtFormatted}}</p>
+        <p><strong>Data e hora de atualização:</strong> {{this.updatedAtFormatted}}</p>
+      </span>
+    </div>
+    <span class="actions">
+      <form action="/tasks/updatestatus" method="POST">
+        <input type="hidden" name="id" value={{this.id}}>
+        <input type="hidden" name="done" value={{this.done}}>
+        <button type="submit" class="btn btn-primary">
+          <i class="bi bi-check2"></i> Concluir
+        </button>
+      </form>
+      <a href="/tasks/edit/{{this.id}}" class="btn btn-warning"><i class="bi bi-pencil-square"></i> Editar</a>
+      <form action="/tasks/remove" method="POST">
+        <input type="hidden" name="id" value={{this.id}}>
+        <button type="submit" class="btn btn-danger">
+          <i class="bi bi-x-lg"></i> Excluir
+        </button>
+      </form>
+    </span>
+  </li>
+  {{/each}}
+</ul> --}}
+
+<h1>Minha Lista de Compromissos</h1>
+<ul class="task-list">
+  {{#if emptyTasks}}
+  <p>Não há tarefas cadastradas</p>
+  {{/if}}
+  {{#each tasks}}
+  <li>
+    <div class="task-details">
+      <h2 class="title">{{this.title}}</h2>
+      <p class="description">{{this.description}}</p>
+      <span class="date-time">
+        <p><strong>Data e hora de criação:</strong> {{this.createdAtFormatted}}</p>
+        <p><strong>Data e hora de atualização:</strong> {{this.updatedAtFormatted}}</p>
+      </span>
+    </div>
+    <span class="actions">
+      <form action="/tasks/updatestatus" method="POST">
+        <input type="hidden" name="id" value={{this.id}}>
+        <input type="hidden" name="done" value={{this.done}}>
+        <button type="submit">
+         
+        </button>
+      </form>
+      <a href="/tasks/edit/{{this.id}}"><i class="bi bi-pencil-square"></i></a>
+      <form action="/tasks/remove" method="POST">
+        <input type="hidden" name="id" value={{this.id}}>
+        <button type="submit">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </form>
+     
+    </span>
+  </li>
+  {{/each}}
+</ul> 

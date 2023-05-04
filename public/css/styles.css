@@ -1,0 +1,403 @@
+/* @media only screen and (max-width: 768px) {
+  .container {
+    max-width: 90%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    max-width: 70%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    max-width: 50%;
+  }
+}
+
+* {
+
+  font-family: 'arial', cursive;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f1f0f0;
+  background-image: url('/img/agendagroup.png'), url('/img/4.png');
+  background-size: 55%, 30%;
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: fixed, fixed;
+  background-position-x: left, right;
+  background-position-y: 50%, 50%;
+}
+
+body {
+  background-position: left -28% top 50%, right 50%;
+}
+
+
+
+#navbar {
+  padding: 1em 2em;
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #8bd3dd;
+  color: #fff;
+}
+
+#navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+#navbar ul li {
+  margin-left: 1em;
+}
+
+#navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.container {
+  max-width: 450px;
+  margin: 2em auto;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px #bbb;
+  padding: 2em;
+}
+
+.container form {
+  margin-top: 1.5em;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+
+.form-control label {
+  font-weight: bold;
+  margin-bottom: 0.3em;
+}
+
+.form-control input,
+.form-control textarea {
+  padding: 7px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+form input[type='submit'] {
+  background-color: #8bd3dd;
+  color: #fff;
+  padding: 0.7em 1.5em;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+.task-details .date-time {
+  margin-top: 10px;
+}
+
+
+.task-list {
+  list-style: none;
+  margin-top: 1em;
+}
+
+.task-list li {
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid #efefef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-list .title {
+  font-weight: bold;
+  color: #8bd3dd;
+  transition: 0.5s;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+}
+
+.task-list .title:hover {
+  color: #333;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+.actions i {
+  font-size: 1.5em;
+  margin-right: 0.6em;
+  color: #333;
+}
+
+.actions i:hover {
+  color: #8bd3dd;
+}
+
+.actions form {
+  margin: 0;
+}
+
+.actions button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+  display: flex;
+  align-items: center;
+}
+
+.agenda:before {
+  content: "\f5ae";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 0.5em;
+  color: #8bd3dd;
+}
+
+.escritorio:before {
+  content: "\f0e3";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 0.5em;
+  color: #8bd3dd;
+} */
+
+@media only screen and (max-width: 768px) {
+  .container {
+    max-width: 90%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    max-width: 70%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    max-width: 50%;
+  }
+}
+
+* {
+
+  font-family: 'arial', cursive;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f1f0f0;
+  background-image: url('/img/agendagroup.png'), url('/img/4.png');
+  background-size: 55%, 30%;
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: fixed, fixed;
+  background-position-x: left, right;
+  background-position-y: 50%, 50%;
+}
+
+body {
+  background-position: left -28% top 50%, right 50%;
+}
+
+
+
+#navbar {
+  padding: 1em 2em;
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #8bd3dd;
+  color: #fff;
+}
+
+#navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+#navbar ul li {
+  margin-left: 1em;
+}
+
+#navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.container {
+  max-width: 451px;
+  margin: 1em auto;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px #bbb;
+  padding: 2em;
+}
+
+.container form {
+  margin-top: 1.5em;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+
+.form-control label {
+  font-weight: bold;
+  margin-bottom: 0.3em;
+}
+
+.form-control input,
+.form-control textarea {
+  padding: 7px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+form input[type='submit'] {
+  background-color: #8bd3dd;
+  color: #fff;
+  padding: 0.7em 1.5em;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+.task-details .date-time {
+  margin-top: 10px;
+}
+
+
+.task-list {
+  list-style: none;
+  margin-top: 1em;
+}
+
+.task-list li {
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid #efefef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-list .title {
+  font-weight: bold;
+  color: #8bd3dd;
+  transition: 0.5s;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+}
+
+.task-list .title:hover {
+  color: #333;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+.actions i {
+  font-size: 1.5em;
+  margin-right: 0.6em;
+  color: #333;
+}
+
+.actions i:hover {
+  color: #8bd3dd;
+}
+
+.actions form {
+  margin: 0;
+}
+
+.actions button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+  display: flex;
+  align-items: center;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.agenda:before {
+  content: "\f5ae";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 0.5em;
+  color: #8bd3dd;
+}
+
+.escritorio:before {
+  content: "\f0e3";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 0.5em;
+  color: #8bd3dd;
+}
+
+.task-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-details h2, .task-details p {
+  margin: 0;
+}
+
+.date-time {
+  margin-top: 0.5rem;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-top: 0.5rem;
+}
+
+.actions button, .actions a {
+  margin-bottom: 0.5rem;
+}

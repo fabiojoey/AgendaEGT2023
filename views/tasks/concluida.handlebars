@@ -1,0 +1,16 @@
+{{! views/concluida.handlebars }}
+
+<h1>Compromissos Realizados</h1>
+
+<ul>
+  {{#each tasks}}
+    <li>
+      <h2>{{this.title}}</h2>
+      <p>{{this.description}}</p>
+      <p>Data Início: {{this.data_inicio}}</p>
+      <p>Data Fim: {{this.data_fim}}</p>
+    </li>
+  {{/each}}
+</ul>
+
+<a href="/tasks">Voltar para a Lista de Compromissos</a>
